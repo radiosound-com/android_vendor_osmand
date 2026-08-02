@@ -1,7 +1,7 @@
 # Caramel Vanilla OsmAnd prebuilt
 
-This repository supplies the OsmAnd Automotive APK used by the Caramel Vanilla
-Raspberry Pi 5 product.
+This repository supplies the OsmAnd Automotive APK and the open-source
+Caramel Vanilla templates host used by the Raspberry Pi 5 product.
 
 The APK is built from the `caramel-vanilla-osmand-aaos` branch of
 [`radiosound-com/OsmAnd`](https://github.com/radiosound-com/OsmAnd), currently
@@ -16,7 +16,8 @@ limit. Install Git LFS before syncing the Android checkout. The product build
 re-signs it with the platform certificate.
 
 The AOSP tree's `CarTemplatesHost.mk` only publishes the
-`android.software.car.templates_host` feature and permissions. It does not
-contain a templates renderer implementation. A runtime image must provide a
-compatible host (the Google Automotive AVD does); this prebuilt does not copy
-proprietary host software into the open-source product.
+`android.software.car.templates_host` feature and permissions. The
+`TemplatesHost/CaramelVanillaTemplatesHost.apk` prebuilt supplies the renderer
+implementation for this product and is platform-signed during the AOSP build.
+It supports the navigation/list templates used by OsmAnd and preserves the
+separate full-UI launcher for downloads and other parked-only tasks.

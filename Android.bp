@@ -19,3 +19,9 @@ android_app_import {
     certificate: "platform",
     overrides: ["CarMapsPlaceholder"],
 }
+
+android_app_import {
+    name: "CaramelVanillaTemplatesHost",
+    apk: "TemplatesHost/CaramelVanillaTemplatesHost.apk",
+    certificate: "platform",
+}
