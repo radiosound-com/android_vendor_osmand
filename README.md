@@ -15,9 +15,10 @@ The APK is stored with Git LFS because it is larger than GitHub's regular-file
 limit. Install Git LFS before syncing the Android checkout. The product build
 re-signs it with the platform certificate.
 
-The AOSP tree's `CarTemplatesHost.mk` only publishes the
-`android.software.car.templates_host` feature and permissions. The
-`TemplatesHost/CaramelVanillaTemplatesHost.apk` prebuilt supplies the renderer
-implementation for this product and is platform-signed during the AOSP build.
-It supports the navigation/list templates used by OsmAnd and preserves the
-separate full-UI launcher for downloads and other parked-only tasks.
+The AOSP tree's `CarTemplatesHost.mk` publishes the
+`android.software.car.templates_host` feature and the privileged host
+permissions. The `TemplatesHost/CaramelVanillaTemplatesHost.apk` prebuilt
+supplies the renderer implementation, is installed as a product privileged app,
+and is platform-signed during the AOSP build. It supports the navigation/list
+templates used by OsmAnd and preserves the separate full-UI launcher for
+downloads and other parked-only tasks.

@@ -25,4 +25,17 @@ android_app_import {
     apk: "TemplatesHost/CaramelVanillaTemplatesHost.apk",
     certificate: "platform",
     privileged: true,
+    product_specific: true,
+    licenses: ["vendor_radiosound_templates_host_license"],
+}
+
+license {
+    name: "vendor_radiosound_templates_host_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+    license_text: [
+        "TemplatesHost/LICENSE",
+    ],
 }
