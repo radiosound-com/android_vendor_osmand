@@ -31,7 +31,7 @@ downloads and other parked-only tasks.
 
 The bundled templates-host source is maintained in
 [`android_packages_apps_Car_TemplatesHost`](https://github.com/radiosound-com/android_packages_apps_Car_TemplatesHost)
-at commit `9020463`.
+at commit `8747df6`.
 
 Related published source:
 
