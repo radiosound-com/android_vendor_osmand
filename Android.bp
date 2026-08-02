@@ -1,0 +1,20 @@
+package {
+    default_applicable_licenses: ["vendor_radiosound_osmand_license"],
+}
+
+license {
+    name: "vendor_radiosound_osmand_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-GPL-3.0-or-later",
+    ],
+    license_text: [
+        "LICENSE",
+    ],
+}
+
+android_app_import {
+    name: "CaramelVanillaOsmAnd",
+    apk: "OsmAnd/OsmAnd-nightlyFree-legacy-fat-automotive.apk",
+    certificate: "platform",
+}
