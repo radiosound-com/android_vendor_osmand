@@ -17,4 +17,5 @@ android_app_import {
     name: "CaramelVanillaOsmAnd",
     apk: "OsmAnd/OsmAnd-nightlyFree-legacy-fat-automotive.apk",
     certificate: "platform",
+    overrides: ["CarMapsPlaceholder"],
 }
