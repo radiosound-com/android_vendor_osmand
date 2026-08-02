@@ -24,4 +24,5 @@ android_app_import {
     name: "CaramelVanillaTemplatesHost",
     apk: "TemplatesHost/CaramelVanillaTemplatesHost.apk",
     certificate: "platform",
+    privileged: true,
 }
