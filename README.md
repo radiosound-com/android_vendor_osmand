@@ -10,7 +10,8 @@ licenses; the repository's [OsmAnd license notice](LICENSE) must be preserved.
 
 The APK is built from the `caramel-vanilla-osmand-aaos` branch of
 [`radiosound-com/OsmAnd`](https://github.com/radiosound-com/OsmAnd), currently
-pinned to commit `06e5fad`. It contains two entrypoints:
+pinned to commit `ef00fe64613`. The current product artifact includes the
+arm64-v8a native map renderer and contains two entrypoints:
 
 * `OsmAnd Nightly`: the Android Automotive templates UI via `CarAppActivity`.
 * `OsmAnd Full UI`: the ordinary `MapActivity`, intended for downloads and
