@@ -32,6 +32,15 @@ android_app_import {
     licenses: ["vendor_radiosound_templates_host_license"],
 }
 
+android_app_import {
+    name: "CaramelVanillaAuroraStore",
+    apk: "AuroraStore/AuroraStore-4.8.1.apk",
+    // Preserve the F-Droid/Aurora signature so Aurora can update itself.
+    presigned: true,
+    product_specific: true,
+    licenses: ["vendor_radiosound_aurora_store_license"],
+}
+
 license {
     name: "vendor_radiosound_templates_host_license",
     visibility: [":__subpackages__"],
@@ -40,5 +49,16 @@ license {
     ],
     license_text: [
         "TemplatesHost/LICENSE",
+    ],
+}
+
+license {
+    name: "vendor_radiosound_aurora_store_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-GPL-3.0-or-later",
+    ],
+    license_text: [
+        "AuroraStore/LICENSE",
     ],
 }

@@ -33,6 +33,15 @@ The bundled templates-host source is maintained in
 [`android_packages_apps_Car_TemplatesHost`](https://github.com/radiosound-com/android_packages_apps_Car_TemplatesHost)
 at commit `8d7ae46`.
 
+The optional Aurora Store package is the F-Droid-distributed `com.aurora.store`
+4.8.1 artifact. It is preserved as a pre-signed product app so its own update
+signature remains valid. The source and upstream releases are maintained by
+[Aurora OSS](https://gitlab.com/AuroraOSS/AuroraStore); the artifact URL is
+[`https://f-droid.org/repo/com.aurora.store_73.apk`](https://f-droid.org/repo/com.aurora.store_73.apk)
+and its SHA-256 is `fd4d2d4cfb4a4d77766930f722c6a524af90cc1c7ff8aa6b81fe9c2b0fc5308a`.
+Aurora remains a normal parked-mode app and is subject to the same in-car
+per-app install-source policy as other third-party installers.
+
 Related published source:
 
 * [Caramel Vanilla templates host](https://github.com/radiosound-com/android_packages_apps_Car_TemplatesHost)
