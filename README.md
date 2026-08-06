@@ -42,7 +42,9 @@ downloads and other parked-only tasks.
 
 The bundled templates-host source is maintained in
 [`android_packages_apps_Car_TemplatesHost`](https://github.com/radiosound-com/android_packages_apps_Car_TemplatesHost)
-at commit `8d7ae46`.
+at commit `0bf20fe` (`Complete navigation template rendering and controls`).
+The bundled templates-host APK SHA-256 is
+`af0da9b40da153b10e43f04638ef4cb820ef035710cf5bf97ff9cf298945f32a`.
 
 Related published source:
 
