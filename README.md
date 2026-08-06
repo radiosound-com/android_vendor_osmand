@@ -11,7 +11,7 @@ remain under the upstream OsmAnd licenses; the repository's
 
 The APK is built from the `caramel-vanilla-osmand-aaos` branch of
 [`radiosound-com/OsmAnd`](https://github.com/radiosound-com/OsmAnd), currently
-pinned to commit `ef7674a` (`Process cold-start Automotive navigation
+pinned to commit `f82991b` (`Process cold-start Automotive navigation
 intents`). It contains two entrypoints:
 
 * `OsmAnd Nightly`: the Android Automotive templates UI via `CarAppActivity`.
@@ -31,7 +31,7 @@ ANDROID_HOME=/path/to/android-sdk ANDROID_NDK=/path/to/android-ndk \
 ```
 
 The bundled APK SHA-256 is
-`c1249c585f07577517afb065e7af7b5dc1f16eb16888a1dee2e1d6bc06490006`.
+`86caae23fdbe715631d32700f4341d6c5218ec1863d5f1ce615ff613ddf93549`.
 This artifact includes the native `libosmand.so` and `libc++_shared.so`
 libraries; the exact OsmAnd native-core inputs used to assemble it are locked
 in [`provenance/SOURCES.lock`](provenance/SOURCES.lock). A wrapper-only build
