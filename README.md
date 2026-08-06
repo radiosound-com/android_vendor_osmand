@@ -26,11 +26,16 @@ Rebuild the pinned Automotive artifact with:
 
 ```text
 cd OsmAnd
-ANDROID_HOME=/path/to/android-sdk ./gradlew assembleNightlyFreeLegacyFatAutomotive
+ANDROID_HOME=/path/to/android-sdk ANDROID_NDK=/path/to/android-ndk \
+  ./gradlew assembleNightlyFreeLegacyFatAutomotive
 ```
 
 The bundled APK SHA-256 is
-`8217fb18d80aa5c5b9752955e474dce13729c751efa813c878ad8d8c5dfae24a`.
+`c1249c585f07577517afb065e7af7b5dc1f16eb16888a1dee2e1d6bc06490006`.
+This artifact includes the native `libosmand.so` and `libc++_shared.so`
+libraries; the exact OsmAnd native-core inputs used to assemble it are locked
+in [`provenance/SOURCES.lock`](provenance/SOURCES.lock). A wrapper-only build
+that omits those inputs produces an APK that cannot load the offline map core.
 
 The AOSP tree's `CarTemplatesHost.mk` publishes the
 `android.software.car.templates_host` feature and the privileged host
@@ -42,9 +47,12 @@ downloads and other parked-only tasks.
 
 The bundled templates-host source is maintained in
 [`android_packages_apps_Car_TemplatesHost`](https://github.com/radiosound-com/android_packages_apps_Car_TemplatesHost)
-at commit `0bf20fe` (`Complete navigation template rendering and controls`).
+at commit `3f956de` (`Polish map route preview card`).
 The bundled templates-host APK SHA-256 is
-`af0da9b40da153b10e43f04638ef4cb820ef035710cf5bf97ff9cf298945f32a`.
+`ba51768bf49102a2aa6707c1ef1bfca291696c46e41e14df9946643c359126f3`.
+The route-preview renderer now sizes the map card to its content, removes
+decorative placeholder bullets, and renders the primary navigation action as
+a filled control while leaving generic templates unchanged.
 
 Related published source:
 

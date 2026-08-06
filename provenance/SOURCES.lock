@@ -1,0 +1,43 @@
+# Caramel Vanilla OsmAnd / templates-host prebuilt provenance
+# SHA-256 values recorded on 2026-08-06.
+
+## OsmAnd Automotive APK
+
+* Product source: https://github.com/radiosound-com/OsmAnd.git
+* Product branch: `caramel-vanilla-osmand-aaos`
+* Product commit: `ef7674aeac0e65bb0510cf1f2ddc2754c92ce0a9`
+* Product license: upstream OsmAnd license notices are retained in the
+  OsmAnd source tree; this repository carries the GPL-3.0-or-later notice in
+  `../LICENSE` for the shipped product integration.
+* Artifact: `OsmAnd/OsmAnd-nightlyFree-legacy-fat-automotive.apk`
+* Artifact SHA-256:
+  `c1249c585f07577517afb065e7af7b5dc1f16eb16888a1dee2e1d6bc06490006`
+* Native library inputs included in the artifact:
+  * https://github.com/osmandapp/OsmAnd-core.git at
+    `47b34f97fde8b7ab9561c987001921ae20a62f48`
+  * https://github.com/osmandapp/OsmAnd-core-legacy.git at
+    `8d6ebda1405ff87135e3734f35caf5097b0ab2ab`
+  * https://github.com/osmandapp/Osmand.git Android wrapper checkout at
+    `64efe89158816b4fbd24a030509c986da8b3622b`
+* Native payload: `lib/arm64-v8a/libosmand.so` and
+  `lib/arm64-v8a/libc++_shared.so` are present in the APK. The upstream
+  source repositories and their license/notice files are the authoritative
+  corresponding source offer for these libraries.
+
+## Caramel Vanilla templates host APK
+
+* Source: https://github.com/radiosound-com/android_packages_apps_Car_TemplatesHost.git
+* Branch: `android-16.0`
+* Commit: `3f956defe0402e17d03e49fa47e97a8eaf38f384`
+* License: Apache-2.0 (`TemplatesHost/LICENSE`)
+* Artifact: `TemplatesHost/CaramelVanillaTemplatesHost.apk`
+* Artifact SHA-256:
+  `ba51768bf49102a2aa6707c1ef1bfca291696c46e41e14df9946643c359126f3`
+
+## Packaging and signing
+
+These APKs are unsigned/debug build artifacts in this repository and are
+stored with Git LFS. The AOSP product build signs them with the Caramel
+Vanilla platform certificate. The platform-signed APK used for the live Pi
+renderer test was generated from the templates-host artifact above and had
+SHA-256 `fe5955e267499e076d301da26724d16777a27466b740b333a96a033354da65df`.
