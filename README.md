@@ -11,7 +11,8 @@ remain under the upstream OsmAnd licenses; the repository's
 
 The APK is built from the `caramel-vanilla-osmand-aaos` branch of
 [`radiosound-com/OsmAnd`](https://github.com/radiosound-com/OsmAnd), currently
-pinned to commit `06e5fad`. It contains two entrypoints:
+pinned to commit `ef7674a` (`Process cold-start Automotive navigation
+intents`). It contains two entrypoints:
 
 * `OsmAnd Nightly`: the Android Automotive templates UI via `CarAppActivity`.
 * `OsmAnd Full UI`: the ordinary `MapActivity`, intended for downloads and
@@ -20,6 +21,16 @@ pinned to commit `06e5fad`. It contains two entrypoints:
 The APK is stored with Git LFS because it is larger than GitHub's regular-file
 limit. Install Git LFS before syncing the Android checkout. The product build
 re-signs it with the platform certificate.
+
+Rebuild the pinned Automotive artifact with:
+
+```text
+cd OsmAnd
+ANDROID_HOME=/path/to/android-sdk ./gradlew assembleNightlyFreeLegacyFatAutomotive
+```
+
+The bundled APK SHA-256 is
+`8217fb18d80aa5c5b9752955e474dce13729c751efa813c878ad8d8c5dfae24a`.
 
 The AOSP tree's `CarTemplatesHost.mk` publishes the
 `android.software.car.templates_host` feature and the privileged host
