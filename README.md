@@ -19,8 +19,10 @@ intents`). It contains two entrypoints:
   other parked-only tasks.
 
 The APK is stored with Git LFS because it is larger than GitHub's regular-file
-limit. Install Git LFS before syncing the Android checkout. The product build
-re-signs it with the platform certificate.
+limit. Install Git LFS before syncing the Android checkout. It is signed with
+the dedicated Caramel OsmAnd release identity and the product build preserves
+that signature, allowing repository-delivered updates without distributing the
+Android platform key.
 
 Rebuild the pinned Automotive artifact with:
 
@@ -31,7 +33,9 @@ ANDROID_HOME=/path/to/android-sdk ANDROID_NDK=/path/to/android-ndk \
 ```
 
 The bundled APK SHA-256 is
-`86caae23fdbe715631d32700f4341d6c5218ec1863d5f1ce615ff613ddf93549`.
+`14e6455ab822d9ca9b24bfb5b44e8f5c16657cc2b6baf01c745183604e692a49`.
+Its signing-certificate SHA-256 is
+`729114e97e3dbbf4d5d300fbf40bd72f99142ae15fdc5bfe57adc37b63dc4a18`.
 This artifact includes the native `libosmand.so` and `libc++_shared.so`
 libraries; the exact OsmAnd native-core inputs used to assemble it are locked
 in [`provenance/SOURCES.lock`](provenance/SOURCES.lock). A wrapper-only build

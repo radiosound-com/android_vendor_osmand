@@ -11,7 +11,9 @@
   `../LICENSE` for the shipped product integration.
 * Artifact: `OsmAnd/OsmAnd-nightlyFree-legacy-fat-automotive.apk`
 * Artifact SHA-256:
-  `86caae23fdbe715631d32700f4341d6c5218ec1863d5f1ce615ff613ddf93549`
+  `14e6455ab822d9ca9b24bfb5b44e8f5c16657cc2b6baf01c745183604e692a49`
+* Signing-certificate SHA-256:
+  `729114e97e3dbbf4d5d300fbf40bd72f99142ae15fdc5bfe57adc37b63dc4a18`
 * Native library inputs included in the artifact:
   * https://github.com/osmandapp/OsmAnd-core.git at
     `47b34f97fde8b7ab9561c987001921ae20a62f48`
@@ -36,8 +38,9 @@
 
 ## Packaging and signing
 
-These APKs are unsigned/debug build artifacts in this repository and are
-stored with Git LFS. The AOSP product build signs them with the Caramel
-Vanilla platform certificate. The platform-signed APK used for the live Pi
-renderer test was generated from the templates-host artifact above and had
+The OsmAnd APK is signed with the dedicated Caramel OsmAnd release identity and
+the AOSP product build preserves that signature. The templates-host APK remains
+an unsigned/debug build artifact in this repository; the AOSP product build
+signs that privileged component with the Caramel Vanilla platform certificate.
+The platform-signed templates-host APK used for the live Pi renderer test had
 SHA-256 `fe5955e267499e076d301da26724d16777a27466b740b333a96a033354da65df`.

@@ -19,7 +19,9 @@ license {
 android_app_import {
     name: "CaramelVanillaOsmAnd",
     apk: "OsmAnd/OsmAnd-nightlyFree-legacy-fat-automotive.apk",
-    certificate: "platform",
+    // Preserve the dedicated fork identity for repository-delivered updates.
+    presigned: true,
+    preprocessed: true,
     overrides: ["CarMapsPlaceholder"],
 }
 
