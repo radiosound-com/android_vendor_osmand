@@ -5,13 +5,13 @@
 
 * Product source: https://github.com/radiosound-com/OsmAnd.git
 * Product branch: `caramel-vanilla-osmand-aaos`
-* Product commit: `ef7674aeac0e65bb0510cf1f2ddc2754c92ce0a9`
+* Product commit: `f82991bfe2d36c2b916fb77a31516532974e695a`
 * Product license: upstream OsmAnd license notices are retained in the
   OsmAnd source tree; this repository carries the GPL-3.0-or-later notice in
   `../LICENSE` for the shipped product integration.
 * Artifact: `OsmAnd/OsmAnd-nightlyFree-legacy-fat-automotive.apk`
 * Artifact SHA-256:
-  `c1249c585f07577517afb065e7af7b5dc1f16eb16888a1dee2e1d6bc06490006`
+  `86caae23fdbe715631d32700f4341d6c5218ec1863d5f1ce615ff613ddf93549`
 * Native library inputs included in the artifact:
   * https://github.com/osmandapp/OsmAnd-core.git at
     `47b34f97fde8b7ab9561c987001921ae20a62f48`
