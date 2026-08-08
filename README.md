@@ -1,7 +1,7 @@
 # Caramel Vanilla OsmAnd prebuilt
 
-This repository supplies the OsmAnd Automotive APK and the open-source
-Caramel Vanilla templates host used by the Raspberry Pi 5 product.
+This repository supplies the OsmAnd Automotive APK used by the Raspberry Pi 5
+and Caramel AVD products.
 
 Copyright 2026 Radio Sound, Inc. The original product-integration metadata and
 templates-host packaging in this repository are licensed under the
@@ -41,26 +41,14 @@ libraries; the exact OsmAnd native-core inputs used to assemble it are locked
 in [`provenance/SOURCES.lock`](provenance/SOURCES.lock). A wrapper-only build
 that omits those inputs produces an APK that cannot load the offline map core.
 
-The AOSP tree's `CarTemplatesHost.mk` publishes the
-`android.software.car.templates_host` feature and the privileged host
-permissions. The `TemplatesHost/CaramelVanillaTemplatesHost.apk` prebuilt
-supplies the renderer implementation, is installed as a product privileged app,
-and is platform-signed during the AOSP build. It supports the navigation/list
-templates used by OsmAnd and preserves the separate full-UI launcher for
-downloads and other parked-only tasks.
-
-The bundled templates-host source is maintained in
-[`android_packages_apps_Car_TemplatesHost`](https://github.com/radiosound-com/android_packages_apps_Car_TemplatesHost)
-at commit `3f956de` (`Polish map route preview card`).
-The bundled templates-host APK SHA-256 is
-`ba51768bf49102a2aa6707c1ef1bfca291696c46e41e14df9946643c359126f3`.
-The route-preview renderer now sizes the map card to its content, removes
-decorative placeholder bullets, and renders the primary navigation action as
-a filled control while leaving generic templates unchanged.
+The Caramel templates-host APK is packaged separately by
+[`android_vendor_car_templates_host`](https://github.com/radiosound-com/android_vendor_car_templates_host).
+Keeping that module in its own vendor project avoids duplicate Soong module
+definitions when the manifest syncs the split application packages.
 
 Related published source:
 
-* [Caramel Vanilla templates host](https://github.com/radiosound-com/android_packages_apps_Car_TemplatesHost)
+* [Caramel Vanilla templates host packaging](https://github.com/radiosound-com/android_vendor_car_templates_host)
 * [Caramel Vanilla manifest](https://github.com/radiosound-com/caramel-vanilla-manifest)
 * [Raspberry Pi 5 device integration](https://github.com/radiosound-com/android_device_brcm_rpi5/tree/caramel-vanilla-aaos)
 * [OsmAnd AAOS fork](https://github.com/radiosound-com/OsmAnd/tree/caramel-vanilla-osmand-aaos)
