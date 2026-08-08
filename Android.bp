@@ -22,6 +22,7 @@ android_app_import {
     // Preserve the dedicated fork identity for repository-delivered updates.
     presigned: true,
     preprocessed: true,
+    product_specific: true,
     overrides: ["CarMapsPlaceholder"],
 }
 
